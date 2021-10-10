@@ -19,8 +19,9 @@
 
 #define ON 1
 #define OFF 0
-#define MIN 65
-#define MAX 70
+#define MIN 60
+#define MID 70
+#define MAX 80
 
 void set_fan(char *level) {
     char buf[80] = {0};
@@ -76,8 +77,11 @@ int main(int c, char **v) {
             printf("invalid temperature reading");
             exit(1);
         }
-        if(current_temperature >= MAX && fan == OFF) {
+        if(current_temperature >= MAX) {
             set_fan("7");
+            fan = ON;
+        } else if(current_temperature >= MID && fan == OFF) {
+            set_fan("1");
             fan = ON;
         }
         if(current_temperature < MIN && fan == ON) {
