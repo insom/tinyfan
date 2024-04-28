@@ -2,8 +2,8 @@
  * (c) Aaron Brady in 2021
  * Do with this code as you wish, at your own risk.
  *
- * Constrain the temperature of a Thinkpad X131e between an upper and lower
- * bound. I would rather silence punctuated by the blast of fans than a
+ * Constrain the temperature of a Thinkpad X131e or T440p between an upper and
+ * lower bound. I would rather silence punctuated by the blast of fans than a
  * constant low level whine, so I've written the code to use the fan as a blunt
  * instrument.
  *
